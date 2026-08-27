@@ -1,0 +1,4 @@
+/* Styles for AddProduct and EditProduct are handled globally and by ProductForm.css */
+.add-product-page, .edit-product-page {
+  padding-bottom: 2rem;
+}

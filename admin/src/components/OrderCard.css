@@ -1,0 +1,95 @@
+.order-card {
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-id-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.order-id {
+  font-family: monospace;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.copy-btn {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.copy-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.order-card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.customer-info, .order-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.order-details {
+  align-items: flex-end;
+}
+
+.customer-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.customer-email, .order-date, .order-items {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.order-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.order-amount {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.view-details {
+  font-size: 0.85rem;
+  color: var(--accent-secondary);
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.order-card:hover .view-details {
+  opacity: 0.8;
+}

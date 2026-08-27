@@ -1,0 +1,64 @@
+.stats-card {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stats-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.type-default .stats-icon-wrapper {
+  background: rgba(108, 99, 255, 0.2);
+  color: var(--accent-primary);
+}
+
+.type-revenue .stats-icon-wrapper {
+  background: var(--accent-gradient);
+}
+
+.type-pending .stats-icon-wrapper {
+  background: rgba(255, 193, 7, 0.2);
+  color: var(--warning);
+}
+
+.type-shipped .stats-icon-wrapper {
+  background: rgba(156, 39, 176, 0.2);
+  color: #9c27b0;
+}
+
+.type-delivered .stats-icon-wrapper {
+  background: rgba(0, 230, 118, 0.2);
+  color: var(--success);
+}
+
+.stats-content {
+  flex: 1;
+}
+
+.stats-title {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.stats-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}

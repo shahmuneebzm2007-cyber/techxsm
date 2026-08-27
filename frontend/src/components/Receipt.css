@@ -1,0 +1,175 @@
+.receipt-page {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2rem 1rem;
+}
+
+.bokeh-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(108, 99, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 40%);
+  z-index: 1;
+}
+
+.receipt-container {
+  position: relative;
+  z-index: 10;
+  max-width: 500px;
+  width: 100%;
+  padding: 3rem 2rem;
+  border-radius: var(--radius-xl);
+  border-top: 4px solid var(--accent-primary);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.receipt-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.receipt-header h1 {
+  font-size: var(--text-3xl);
+  margin-top: 1rem;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SVG Checkmark Animation */
+.success-checkmark {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.checkmark-circle {
+  stroke: var(--success);
+  stroke-width: 2;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-check {
+  stroke: var(--success);
+  stroke-width: 3;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
+}
+
+@keyframes stroke {
+  100% { stroke-dashoffset: 0; }
+}
+
+.receipt-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.receipt-section {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.receipt-section .label {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.receipt-section .value {
+  font-size: var(--text-lg);
+  font-weight: 500;
+}
+
+.success-text {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.order-id-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border);
+}
+
+.id-text {
+  font-family: monospace;
+  font-size: var(--text-lg);
+  letter-spacing: 1px;
+}
+
+.receipt-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  border: none;
+}
+
+.primary-btn, .secondary-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.primary-btn {
+  background: var(--accent-primary);
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #5a52e6;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.secondary-btn:hover {
+  background: var(--bg-card-hover);
+}
+
+/* Confetti */
+.confetti-container {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 20px;
+  animation: confetti-fall linear forwards;
+}
+
+.c-0 { background: var(--accent-primary); }
+.c-1 { background: var(--accent-secondary); }
+.c-2 { background: var(--success); }
+.c-3 { background: var(--warning); }
+.c-4 { background: #ff00ff; }
